@@ -2,7 +2,7 @@ package fuelling;
 
 public class RentCompanyFactory extends CompanyFactory {
     @Override
-    RentCompany create() {
+    public RentCompany create() {
         return new RentCompany();
     }
 }
