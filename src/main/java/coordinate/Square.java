@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Square implements Figure {
+    private static final String name = "사각형";
     private List<Points> pointsList;
 
     public Square(List<Points> pointsList) throws Exception {
@@ -17,6 +18,11 @@ public class Square implements Figure {
         List<Integer> xPosList = pointsList.stream().map(Points::getXpos).distinct().collect(Collectors.toList());
         List<Integer> yPosList = pointsList.stream().map(Points::getYpos).distinct().collect(Collectors.toList());
         return xPosList.size() != 2 || yPosList.size() != 2;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override

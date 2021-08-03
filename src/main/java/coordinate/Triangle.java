@@ -4,10 +4,16 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Triangle implements Figure {
+    private static final String name = "삼각형";
     private List<Points> pointsList;
 
     public Triangle(List<Points> pointsList) {
         this.pointsList = pointsList;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override

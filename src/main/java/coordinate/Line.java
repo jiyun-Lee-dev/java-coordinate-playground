@@ -4,10 +4,16 @@ import java.time.Year;
 import java.util.List;
 
 public class Line implements Figure{
+    private static final String name = "선";
     private List<Points> pointsList;
 
     public Line(List<Points> pointsList) {
         this.pointsList = pointsList;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override
