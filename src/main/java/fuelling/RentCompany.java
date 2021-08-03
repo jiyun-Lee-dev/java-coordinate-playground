@@ -1,5 +1,4 @@
 package fuelling;
 
-public class RentCompany {
-    
+public class RentCompany extends Company{
 }

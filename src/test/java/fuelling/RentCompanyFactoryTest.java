@@ -9,13 +9,13 @@ public class RentCompanyFactoryTest {
     public void report() throws Exception {
         RentCompanyFactory rentCompanyFactory = new RentCompanyFactory();
         RentCompany rentCompany = rentCompanyFactory.create();
-        company.addCar(new Sonata(150));
-        company.addCar(new K5(260));
-        company.addCar(new Sonata(120));
-        company.addCar(new Avante(300));
-        company.addCar(new K5(390));
+        rentCompany.addCar(new Sonata(150));
+        rentCompany.addCar(new K5(260));
+        rentCompany.addCar(new Sonata(120));
+        rentCompany.addCar(new Avante(300));
+        rentCompany.addCar(new K5(390));
 
-        String report = rentCompanyFactory.generateReport();
+        String report = rentCompany.generateReport();
         assertThat(report).isEqualTo(
                 "Sonata : 15리터" + NEWLINE +
                 "K5 : 20리터" + NEWLINE +

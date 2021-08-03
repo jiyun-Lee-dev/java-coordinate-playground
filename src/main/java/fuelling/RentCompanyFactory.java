@@ -1,8 +1,8 @@
 package fuelling;
 
-public class RentCompanyFactory extends Factory {
+public class RentCompanyFactory extends CompanyFactory {
     @Override
-    public RentCompany create() {
+    RentCompany create() {
         return new RentCompany();
     }
 }
