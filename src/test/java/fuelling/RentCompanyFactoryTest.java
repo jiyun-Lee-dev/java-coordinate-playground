@@ -1,6 +1,8 @@
 package fuelling;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class RentCompanyFactoryTest {
     private static final String NEWLINE = System.getProperty("line.separator");
