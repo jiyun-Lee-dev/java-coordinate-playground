@@ -1,22 +1,27 @@
 package fuelling;
 
 public class Sonata extends Car {
-    public Sonata(int mileage) {
-        super();
+    private Name name;
+    private Distance distance;
+    private final static Mileage mileage = new Mileage(10);
+
+    public Sonata(int distance) {
+        this.name = new Name("Sonata");
+        this.distance = new Distance(distance);
     }
 
     @Override
     double getDistancePerLiter() {
-        return 0;
+        return mileage.getValue();
     }
 
     @Override
     double getTripDistance() {
-        return 0;
+        return distance.getValue();
     }
 
     @Override
     String getName() {
-        return null;
+        return name.getValue();
     }
 }

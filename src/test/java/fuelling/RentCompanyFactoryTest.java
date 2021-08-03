@@ -8,7 +8,7 @@ public class RentCompanyFactoryTest {
     private static final String NEWLINE = System.getProperty("line.separator");
 
     @Test
-    public void report() throws Exception {
+    public void report() throws Exception { // exception은 뭘까
         RentCompanyFactory rentCompanyFactory = new RentCompanyFactory();
         RentCompany rentCompany = rentCompanyFactory.create();
         rentCompany.addCar(new Sonata(150));
