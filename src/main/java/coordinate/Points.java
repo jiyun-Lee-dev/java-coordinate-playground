@@ -1,5 +1,7 @@
 package coordinate;
 
+import java.util.Objects;
+
 public class Points {
     // 이것도 포장해야하나..? 일단 스킵..
     private int xPos;
@@ -8,5 +10,18 @@ public class Points {
     public Points(int xPos, int yPos) {
         this.xPos = xPos;
         this.yPos = yPos;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Points points = (Points) o;
+        return xPos == points.xPos && yPos == points.yPos;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(xPos, yPos);
     }
 }

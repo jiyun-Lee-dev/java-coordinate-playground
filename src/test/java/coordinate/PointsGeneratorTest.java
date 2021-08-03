@@ -22,7 +22,11 @@ public class PointsGeneratorTest {
         String inputForLine = "(10,10)-(14,15)";
         List<Points> expected = Arrays.asList(new Points(10, 10), new Points(14, 15));
         List<Points> actual = pointsGenerator.generate(inputForLine);
-        assertThat(actual).isEqualTo(expected);
+        int index = 0;
+        for (Points points : actual) {
+            assertThat(points.equals(expected.get(index))).isTrue();
+            index++;
+        }
     }
 
 }
