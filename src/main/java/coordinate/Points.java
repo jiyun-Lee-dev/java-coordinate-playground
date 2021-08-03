@@ -15,8 +15,8 @@ public class Points {
         this.yPos = yPos;
     }
 
-    private boolean isNotValuable(int pos) {
-        return pos < 0 || pos > 24;
+    private boolean isNotValuable(double pos) {
+        return pos < 0.0 || pos > 24.0;
     }
 
     @Override
@@ -30,5 +30,13 @@ public class Points {
     @Override
     public int hashCode() {
         return Objects.hash(xPos, yPos);
+    }
+
+    public int getXpos() {
+        return this.xPos;
+    }
+
+    public int getYpos() {
+        return this.yPos;
     }
 }

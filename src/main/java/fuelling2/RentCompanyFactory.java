@@ -1,6 +1,6 @@
 package fuelling2;
 
-public class RentCompanyFactory implements CompanyFactory{
+public class RentCompanyFactory {
     public RentCompany create() {
         return new RentCompany();
     };
