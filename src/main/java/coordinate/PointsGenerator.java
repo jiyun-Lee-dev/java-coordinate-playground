@@ -5,7 +5,17 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class PointsGenerator {
-    public List<Points> generate(String inputForFigure) {
+    private final List<Points> pointsList;
+
+    public PointsGenerator(String inputForFigure) throws Exception {
+        List<Points> pointsList = generate(inputForFigure);
+        if (pointsList.size() <= 1) {
+            throw new IllegalArgumentException("좌표는 1개 이상이어야 합니다.");
+        }
+        this.pointsList = pointsList;
+    }
+
+    private List<Points> generate(String inputForFigure) {
         List<String[]> posList = getPosList(inputForFigure);
         List<Points> points = new ArrayList<>();
         for (String[] pos : posList) {
@@ -20,6 +30,10 @@ public class PointsGenerator {
                 .map(points -> points.replace("(", "").replace(")", "").split(",", 2))
                 .collect(Collectors.toList());
         return result;
+    }
+
+    public List<Points> getPointsList() {
+        return this.pointsList;
     }
 
 }

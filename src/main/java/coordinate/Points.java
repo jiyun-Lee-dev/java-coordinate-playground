@@ -8,8 +8,15 @@ public class Points {
     private int yPos;
 
     public Points(int xPos, int yPos) {
+        if (isNotValuable(xPos) || isNotValuable(yPos)) {
+            throw new IllegalArgumentException("좌표의 위치값은 0이상 24이하만 가능합니다.");
+        }
         this.xPos = xPos;
         this.yPos = yPos;
+    }
+
+    private boolean isNotValuable(int pos) {
+        return pos < 0 || pos > 24;
     }
 
     @Override
