@@ -38,4 +38,8 @@ public class Point {
     public int hashCode() {
         return Objects.hash(x, y);
     }
+
+    public boolean isSamePos(int x, int y) {
+        return this.x == x && this.y == y;
+    }
 }

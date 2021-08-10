@@ -20,4 +20,9 @@ public class PointTest {
             new Point(25, 1);
         });
     }
+
+    @Test
+    void 주어진_좌표값이랑_같은지_확인() {
+        assertThat(new Point(1, 2).isSamePos(1, 2)).isTrue();
+    }
 }
