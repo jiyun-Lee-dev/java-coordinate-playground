@@ -26,4 +26,5 @@ public class Line extends AbstractFigure {
     public String getAreaInfo() {
         return INFO_START_MESSAGE + getArea();
     }
+
 }
