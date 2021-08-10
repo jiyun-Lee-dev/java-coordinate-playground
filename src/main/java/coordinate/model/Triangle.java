@@ -38,6 +38,6 @@ public class Triangle extends AbstractFigure{
 
     @Override
     public String getAreaInfo() {
-        return null;
+        return INFO_START_MESSAGE + getArea();
     }
 }
