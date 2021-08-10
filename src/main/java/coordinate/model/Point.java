@@ -26,6 +26,28 @@ public class Point {
         return value < MIN || value > MAX;
     }
 
+    public boolean isSamePos(int x, int y) {
+        return this.x == x && this.y == y;
+    }
+
+    public double calculateDistance(Point point) {
+        double xDiff = getDifference(this.getX(), point.getX());
+        double yDiff = getDifference(this.getY(), point.getY());
+        return Math.sqrt(Math.pow(xDiff, 2) + Math.pow(yDiff, 2));
+    }
+
+    private double getDifference(int first, int second) {
+        return first - second;
+    }
+
+    private int getX() {
+        return this.x;
+    }
+
+    private int getY() {
+        return this.y;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -37,9 +59,5 @@ public class Point {
     @Override
     public int hashCode() {
         return Objects.hash(x, y);
-    }
-
-    public boolean isSamePos(int x, int y) {
-        return this.x == x && this.y == y;
     }
 }
