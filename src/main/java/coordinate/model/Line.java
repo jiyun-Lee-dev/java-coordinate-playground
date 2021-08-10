@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Line extends AbstractFigure {
     private static final String INFO_START_MESSAGE = "두 점 사이의 거리는 ";
-    private static final String ERROR_IS_NOT_LINE = "잘못된 입력값입니다.";
+    private static final String ERROR_IS_NOT_LINE = "잘못된 입력값입니다. 선을 만들 수 없습니다.";
 
     public Line(List<Point> points) {
         super(points);

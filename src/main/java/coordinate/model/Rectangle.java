@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Rectangle extends AbstractFigure{
+    private static final String INFO_START_MESSAGE = "사각형의 넓이는 ";
     private static final String ERROR_IS_NOT_RECTANGLE = "잘못된 입력값입니다. 직사각형만 가능합니다.";
 
     public Rectangle(List<Point> points) {
@@ -33,6 +34,6 @@ public class Rectangle extends AbstractFigure{
 
     @Override
     public String getAreaInfo() {
-        return null;
+        return INFO_START_MESSAGE + getArea();
     }
 }
