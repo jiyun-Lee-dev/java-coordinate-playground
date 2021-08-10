@@ -31,13 +31,19 @@ public class Point {
     }
 
     public double calculateDistance(Point point) {
-        double xDiff = getDifference(this.getX(), point.getX());
-        double yDiff = getDifference(this.getY(), point.getY());
-        return Math.sqrt(Math.pow(xDiff, 2) + Math.pow(yDiff, 2));
+        return Math.sqrt(Math.pow(getXDiff(point), 2) + Math.pow(getYDiff(point), 2));
     }
 
-    private double getDifference(int first, int second) {
-        return first - second;
+    public double getSlope(Point point) {
+        return Math.toDegrees(Math.atan2(getXDiff(point), getYDiff(point)));
+    }
+
+    private double getXDiff(Point point) {
+        return this.getX() - point.getX();
+    }
+
+    private double getYDiff(Point point) {
+        return this.getY() - point.getY();
     }
 
     private int getX() {
